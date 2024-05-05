@@ -1,0 +1,94 @@
+
+.container{
+  padding: 1rem;
+  height: 1250px;
+  animation:fade 2s linear; 
+}
+
+.drop {
+  display: block;
+  width:85%;
+  margin:3% 15% 10% 7.5%;
+  &:hover {
+    .dropOption {
+      display: block;
+    }
+  }
+  &:hover {
+    .dropdown {
+      display: block;
+    }
+  }
+  &:hover {
+    .dropdown.close {
+      display: none;
+    }
+  }
+.dropOption {
+    height: 50px;
+    color: #666;
+    font-size: 20px;
+    background:linear-gradient(to right, rgb(122, 146, 187),rgb(156, 175, 218));
+    padding: 10px;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    box-sizing: border-box;
+    cursor: pointer;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 20px;
+      right: 12px;
+      border-width: 8px 6px;
+      border-style: solid;
+      border-color: #ffffff transparent transparent transparent;
+    }
+  }
+  .dropdown {
+    display: none;
+    width:82.75%;
+    max-height: 350px;
+    position: absolute;
+    color: #333;
+    padding: 0;
+    margin: 0;
+    background:linear-gradient(to right ,rgb(138, 148, 173),rgb(107, 119, 148));
+    box-shadow: 0px 2px 3px 0px #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    overflow: auto;
+    z-index: 10;
+    > li {
+      display: block;
+      color: #000;
+      padding: 12px;
+      font-size: 22.5px;
+      margin: 0 10px;
+      cursor: pointer;
+      &:first-child {
+        margin: 10px;
+      }
+      &:last-child {
+        margin-bottom: 10px;
+      }
+      &:hover {
+        background:linear-gradient(to right ,rgb(138, 148, 173),rgb(107, 119, 148));
+        border-radius: 6px;
+      }
+    }
+    &::-webkit-scrollbar {
+      width: 15px;
+    }
+    &::-webkit-scrollbar-track {
+      background-color: #eee;
+      border-radius: 6px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background:linear-gradient(to right ,rgb(103, 111, 129),rgb(107, 119, 148));
+      border-radius: 15px;
+    }
+    &::-webkit-scrollbar-button {
+      background-color: #f9f9f9;
+    }
+  }
+}
